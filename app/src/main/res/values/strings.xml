@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Voice Chat</string>
+    <string name="app_subtitle">Connect to a TeamSpeak server</string>
+
+    <string name="notification_channel_name">Voice session</string>
+    <string name="notification_channel_description">Active voice connection</string>
+    <string name="notification_title_connected">Connected to voice chat</string>
+    <string name="notification_title_connecting">Connecting…</string>
+    <string name="notification_disconnect">Disconnect</string>
+
+    <string name="action_disconnect">Leave</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_connect">Connect</string>
+    <string name="action_connecting">Connecting…</string>
+    <string name="action_join">Join</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save_server">Save server</string>
+    <string name="action_delete">Remove</string>
+    <string name="action_grant_permission">Allow microphone</string>
+    <string name="action_show_advanced">More options</string>
+    <string name="action_hide_advanced">Hide options</string>
+
+    <string name="label_host">Server address</string>
+    <string name="label_host_hint">e.g. 192.168.1.10 or ts.example.com</string>
+    <string name="label_port">Port</string>
+    <string name="label_port_hint">Leave as 9987 — most servers auto-detect</string>
+    <string name="label_nickname">Your name</string>
+    <string name="label_nickname_hint">How others will see you</string>
+    <string name="label_server_password">Server password</string>
+    <string name="label_server_password_hint">Only if the server needs one</string>
+    <string name="label_channel_password">Channel password</string>
+    <string name="label_voice_mode">How you talk</string>
+    <string name="label_vad_threshold">Microphone sensitivity</string>
+    <string name="label_server_name">Server name</string>
+    <string name="label_server_name_hint">A name you will recognize</string>
+    <string name="label_remember_server">Save this server for next time</string>
+
+    <string name="mode_ptt">Push to talk</string>
+    <string name="mode_ptt_desc">Hold the button while speaking</string>
+    <string name="mode_vad">Speak automatically</string>
+    <string name="mode_vad_desc">Your mic turns on when you talk</string>
+
+    <string name="sensitivity_low">Quiet room</string>
+    <string name="sensitivity_normal">Normal</string>
+    <string name="sensitivity_high">Noisy room</string>
+
+    <string name="section_channels">Rooms</string>
+    <string name="section_users">People</string>
+    <string name="section_saved_servers">Saved servers</string>
+    <string name="section_welcome_title">Join a voice server</string>
+    <string name="section_welcome_body">Enter the server address your host gave you, pick a name, and tap Connect.</string>
+
+    <string name="tab_talk">Talk</string>
+    <string name="tab_rooms">Rooms</string>
+    <string name="tab_people">People</string>
+
+    <string name="status_connected">Connected</string>
+    <string name="status_in_channel">In: %1$s</string>
+    <string name="status_talking">Speaking</string>
+    <string name="status_listening">Listening</string>
+    <string name="status_vad_open">Mic is on</string>
+    <string name="status_identity_preparing">Preparing secure identity… usually under 1 minute.</string>
+    <string name="section_identity_help">Many public servers only accept your existing desktop TeamSpeak identity — not a new one from this app.</string>
+    <string name="section_identity_steps">In desktop TeamSpeak press Ctrl+I → select your identity → Export → open the .ini file in Notepad → copy the long value inside identity="…" (starts with digits, then V) → paste below.</string>
+    <string name="label_import_identity">Exported identity string</string>
+    <string name="label_import_identity_hint">From exported .ini: copy identity="…" (not the Unique ID field)</string>
+    <string name="hint_debug_identity">Some servers require an existing identity. Without it, the connection may time out.</string>
+    <string name="status_vad_closed">Mic is off</string>
+
+    <string name="ptt_hold">Hold to talk</string>
+    <string name="ptt_active">Speaking…</string>
+
+    <string name="channel_current">You are here</string>
+    <string name="channel_locked">Password required</string>
+    <string name="user_talking">Speaking now</string>
+    <string name="people_count">%1$d people in this room</string>
+    <string name="rooms_empty">No rooms available</string>
+    <string name="people_empty">No one else is in this room</string>
+
+    <string name="permission_title">Microphone access needed</string>
+    <string name="permission_body">Voice Chat needs your microphone so others can hear you. Notifications keep the call running when you switch apps.</string>
+
+    <string name="unsupported_codec">This room uses an audio format this app cannot play yet. Ask the server admin to use Opus Voice.</string>
+
+    <string name="error_server_required">Please enter the server address.</string>
+    <string name="error_name_required">Please enter your name.</string>
+    <string name="error_port_invalid">That port number is not valid.</string>
+    <string name="error_permission_denied">Microphone permission was denied. Allow it in Settings to talk.</string>
+    <string name="error_identity">Could not set up your voice identity. Try again.</string>
+    <string name="error_identity_invalid">That identity text could not be read. Export your identity from desktop TS3 (Ctrl+I → Export) and copy the value inside identity="…".</string>
+    <string name="error_identity_public_id">That looks like the public Unique ID, not the private export string. In desktop TS3: Ctrl+I → Export → open the .ini file → copy the value inside identity="…" (starts with digits, then V).</string>
+    <string name="error_identity_rejected">This server rejected the auto-generated identity. Paste your desktop TeamSpeak identity below and connect again.</string>
+    <string name="error_identity_rejected_imported">Connection timed out with your imported identity. First confirm desktop TeamSpeak connects to this server. If it does, try a real phone (not emulator) or click Improve in desktop TS3 and re-export.</string>
+    <string name="error_dns">Could not find that server. Check the address and your internet connection.</string>
+    <string name="error_timeout">Connection timed out. The server may be offline or unreachable.</string>
+    <string name="error_server_rejected">The server refused the connection. Check your password or nickname.</string>
+    <string name="error_audio">Could not start audio. Close other voice apps and try again.</string>
+    <string name="error_disconnected">You were disconnected from the server.</string>
+    <string name="error_unexpected">Something went wrong. Please try again.</string>
+
+    <string name="delete_server_title">Remove saved server?</string>
+    <string name="delete_server_body">"%1$s" will be removed from your saved list.</string>
+</resources>

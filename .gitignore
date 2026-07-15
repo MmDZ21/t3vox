@@ -1,0 +1,44 @@
+# IDE and local tooling
+*.iml
+.gradle/
+.idea/
+.kotlin/
+.qodo/
+local.properties
+.android-sdk/
+
+# Android and Gradle output
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+.navigation/
+bin/
+gen/
+out/
+release/
+output.json
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.hprof
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+keystore.properties
+*.jks
+*.keystore
+*.pem
+*.p12
+
+# Local diagnostic artifacts
+live-debug-output.txt
