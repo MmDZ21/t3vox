@@ -517,7 +517,7 @@ Expected: BUILD SUCCESSFUL with no DNS request or live connection. Do not commit
 
 **Produces:** A byte-for-byte rebuild path for the vendored JAR and complete direct-dependency license references.
 
-- [ ] **Step 1: Add scripts/rebuild-ts3j.ps1**
+- [x] **Step 1: Add scripts/rebuild-ts3j.ps1**
 
 ~~~powershell
 [CmdletBinding()]
@@ -583,7 +583,7 @@ try {
 }
 ~~~
 
-- [ ] **Step 2: Prove byte-for-byte JAR reproduction**
+- [x] **Step 2: Prove byte-for-byte JAR reproduction**
 
 ~~~powershell
 $temporaryJar = Join-Path $env:TEMP "ts3j-repro.jar"
@@ -595,7 +595,7 @@ Remove-Item -LiteralPath $temporaryJar
 
 Expected: hash D360466A61B92A131EF2CEF0CFC81D6DD5035FD23082B7E6D63CF69242C8E004 and no Compare-Object output.
 
-- [ ] **Step 3: Add the approved Apache-2.0 project license**
+- [x] **Step 3: Add the approved Apache-2.0 project license**
 
 ~~~powershell
 Invoke-WebRequest -Uri "https://www.apache.org/licenses/LICENSE-2.0.txt" -OutFile .\LICENSE -UseBasicParsing
@@ -603,7 +603,7 @@ Invoke-WebRequest -Uri "https://www.apache.org/licenses/LICENSE-2.0.txt" -OutFil
 
 Expected: LICENSE starts with “Apache License” and contains “Version 2.0, January 2004”. Do not paraphrase the license.
 
-- [ ] **Step 4: Copy exact third-party license texts**
+- [x] **Step 4: Copy exact third-party license texts**
 
 ~~~powershell
 New-Item -ItemType Directory -Path .\third_party\ts3j -Force | Out-Null
@@ -616,7 +616,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dnsjava/dnsjava/v3.6.2
 
 Expected: all four files exist and are non-empty.
 
-- [ ] **Step 5: Create third_party/ts3j/README.md**
+- [x] **Step 5: Create third_party/ts3j/README.md**
 
 Record:
 
@@ -630,7 +630,7 @@ Record:
 - rebuild command .\scripts\rebuild-ts3j.ps1;
 - both hash rejection conditions.
 
-- [ ] **Step 6: Create NOTICE**
+- [x] **Step 6: Create NOTICE**
 
 ~~~text
 TS3 Mobile (Unofficial)
@@ -644,7 +644,7 @@ TeamSpeak is a trademark of TeamSpeak Systems GmbH. This project is
 unofficial and is not affiliated with or endorsed by TeamSpeak Systems GmbH.
 ~~~
 
-- [ ] **Step 7: Replace THIRD_PARTY_NOTICES.md**
+- [x] **Step 7: Replace THIRD_PARTY_NOTICES.md**
 
 Include:
 
@@ -661,7 +661,7 @@ Include:
 
 Also link the local license copies, link third_party/ts3j/README.md, retain the trademark/non-endorsement statement, require notice updates for shipped dependency changes, and remove the current unresolved Concentus sentence.
 
-- [ ] **Step 8: Verify the first-commit boundary**
+- [x] **Step 8: Verify the first-commit boundary**
 
 ~~~powershell
 git status --short --untracked-files=all
@@ -671,7 +671,7 @@ git diff --check
 
 Expected: the scan and git diff --check print nothing. LICENSE, NOTICE, third_party, ai/tasks.md, source, docs, scripts, and wrapper files are available for staging.
 
-- [ ] **Step 9: Create the first local commit**
+- [x] **Step 9: Create the first local commit**
 
 ~~~powershell
 git add -A
@@ -700,7 +700,7 @@ Expected: the first commit succeeds and contains LICENSE. Stop if generated, cre
 
 **Produces:** Public contributor, security, architecture, roadmap, and review guidance.
 
-- [ ] **Step 1: Create CONTRIBUTING.md**
+- [x] **Step 1: Create CONTRIBUTING.md**
 
 Include:
 
@@ -719,7 +719,7 @@ test(protocol): make SRV resolution deterministic
 docs: document patched ts3j provenance
 ~~~
 
-- [ ] **Step 2: Create SECURITY.md**
+- [x] **Step 2: Create SECURITY.md**
 
 ~~~markdown
 # Security Policy
@@ -747,11 +747,11 @@ dependency tampering, and protocol input causing code execution or denial of
 service.
 ~~~
 
-- [ ] **Step 3: Create CODE_OF_CONDUCT.md**
+- [x] **Step 3: Create CODE_OF_CONDUCT.md**
 
 Define respectful and inclusive technical collaboration; prohibit harassment, discrimination, threats, doxxing, credential/identity disclosure, attacks on third-party servers, and impersonation. Allow maintainers to edit, remove, reject, lock, or ban violating interactions. Cover issues, PRs, discussions, reviews, and project spaces. Use private reporting for sensitive evidence. Do not invent an email address.
 
-- [ ] **Step 4: Create docs/ARCHITECTURE.md**
+- [x] **Step 4: Create docs/ARCHITECTURE.md**
 
 Document:
 
@@ -766,7 +766,7 @@ Document:
 - one-server, OPUS_VOICE, one-identity, no-chat/whisper/admin boundaries;
 - link to third_party/ts3j/README.md.
 
-- [ ] **Step 5: Create docs/ROADMAP.md**
+- [x] **Step 5: Create docs/ROADMAP.md**
 
 Use:
 
@@ -776,19 +776,19 @@ Use:
 
 Non-goals: text chat, whispers, administration, multiple servers, monetization, TS6 protocol.
 
-- [ ] **Step 6: Create docs/PUBLICATION_CHECKLIST.md**
+- [x] **Step 6: Create docs/PUBLICATION_CHECKLIST.md**
 
 Start with: “Passing this checklist prepares source for review; it does not authorize pushing, publication, tagging, or binary distribution.”
 
 Add engineering checkboxes for hygiene, deterministic tests, provenance, licenses, docs, CI, clean build, lint, and public-data scan. Leave legal review, final name, GitHub owner/security channel, visibility approval, and binary distribution approval unchecked.
 
-- [ ] **Step 7: Add GitHub templates**
+- [x] **Step 7: Add GitHub templates**
 
 - bug_report.md: summary, expected/actual, commit, Android/device, connection/audio state, reproduction, redacted logs, no private data confirmation.
 - feature_request.md: user problem, behavior, milestone, protocol/audio/security impact, alternatives.
 - pull_request_template.md: focused scope, issue, tests, unit/lint/build, UI screenshots, physical-device voice conditions, no private data, notices updated.
 
-- [ ] **Step 8: Validate and commit docs**
+- [x] **Step 8: Validate and commit docs**
 
 ~~~powershell
 $required = @(
@@ -822,7 +822,7 @@ Expected: no missing file, no whitespace error, successful commit.
 
 **Produces:** Local and pull-request publication, test, lint, and build gates.
 
-- [ ] **Step 1: Create scripts/check-publication-readiness.ps1**
+- [x] **Step 1: Create scripts/check-publication-readiness.ps1**
 
 ~~~powershell
 [CmdletBinding()]
@@ -899,7 +899,7 @@ if ($failures.Count -gt 0) {
 Write-Host "Publication readiness checks passed."
 ~~~
 
-- [ ] **Step 2: Run the publication check**
+- [x] **Step 2: Run the publication check**
 
 ~~~powershell
 .\scripts\check-publication-readiness.ps1
@@ -907,7 +907,7 @@ Write-Host "Publication readiness checks passed."
 
 Expected: Publication readiness checks passed.
 
-- [ ] **Step 3: Generate the Unix Gradle wrapper**
+- [x] **Step 3: Generate the Unix Gradle wrapper**
 
 ~~~powershell
 .\gradlew.bat wrapper --gradle-version 8.13 --distribution-type bin
@@ -915,7 +915,7 @@ Expected: Publication readiness checks passed.
 
 Expected: gradlew exists; distribution remains gradle-8.13-bin.zip; no plugin/dependency change.
 
-- [ ] **Step 4: Create .github/workflows/android.yml**
+- [x] **Step 4: Create .github/workflows/android.yml**
 
 ~~~yaml
 name: Android CI
@@ -962,7 +962,7 @@ jobs:
 
 Do not add deployment, signing, release, upload, or write permissions.
 
-- [ ] **Step 5: Create .github/dependabot.yml**
+- [x] **Step 5: Create .github/dependabot.yml**
 
 ~~~yaml
 version: 2
@@ -979,7 +979,7 @@ updates:
     open-pull-requests-limit: 5
 ~~~
 
-- [ ] **Step 6: Run local CI-equivalent gates**
+- [x] **Step 6: Run local CI-equivalent gates**
 
 ~~~powershell
 .\scripts\check-publication-readiness.ps1
@@ -989,7 +989,7 @@ git diff --check
 
 Expected: publication check and Gradle succeed; no whitespace errors.
 
-- [ ] **Step 7: Commit CI**
+- [x] **Step 7: Commit CI**
 
 ~~~powershell
 git add scripts/check-publication-readiness.ps1 gradlew gradlew.bat gradle/wrapper .github
@@ -1008,7 +1008,7 @@ git commit -m "ci: verify Android builds and publication safety"
 
 **Produces:** Evidence-backed source ready for owner/legal review, not public.
 
-- [ ] **Step 1: Prove a clean rebuild**
+- [x] **Step 1: Prove a clean rebuild**
 
 ~~~powershell
 .\gradlew.bat clean :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:bundleRelease :app:lintRelease --console=plain
@@ -1016,7 +1016,7 @@ git commit -m "ci: verify Android builds and publication safety"
 
 Expected: BUILD SUCCESSFUL. Report lint errors and warnings; do not add a lint baseline.
 
-- [ ] **Step 2: Prove app/build remains ignored**
+- [x] **Step 2: Prove app/build remains ignored**
 
 ~~~powershell
 git status --short --untracked-files=all
@@ -1024,7 +1024,7 @@ git check-ignore -q app/build/intermediates/merged_manifest/debug/processDebugMa
 if ($LASTEXITCODE -ne 0) { throw "app/build is not ignored" }
 ~~~
 
-- [ ] **Step 3: Re-run provenance checks**
+- [x] **Step 3: Re-run provenance checks**
 
 ~~~powershell
 .\scripts\check-publication-readiness.ps1
@@ -1036,7 +1036,7 @@ Remove-Item -LiteralPath $checkJar
 
 Expected hash: D360466A61B92A131EF2CEF0CFC81D6DD5035FD23082B7E6D63CF69242C8E004.
 
-- [ ] **Step 4: Verify history and first-commit license**
+- [x] **Step 4: Verify history and first-commit license**
 
 ~~~powershell
 git log --oneline --decorate
@@ -1049,7 +1049,7 @@ git diff --check
 
 Expected: first commit contains LICENSE; the path-history scan prints nothing; no commit contains live-debug-output.txt, local.properties, .android-sdk, or app/build.
 
-- [ ] **Step 5: Mark only proven engineering checklist items**
+- [x] **Step 5: Mark only proven engineering checklist items**
 
 Mark hygiene, deterministic tests, provenance, license files, docs, local build, and lint only when proven. Keep legal, naming, owner, visibility, and binary-distribution gates unchecked.
 

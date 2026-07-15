@@ -6,15 +6,15 @@ Use this list during Milestone 1 source-release preparation and before any owner
 
 ## Engineering
 
-- [ ] Repository hygiene: `.gitignore` excludes build output, SDK paths, credentials, and diagnostic artifacts
-- [ ] Deterministic unit tests: normal tests make no external DNS or live-server requests
-- [ ] Patched ts3j provenance: JAR hash matches documented value; rebuild script reproduces byte-for-byte
-- [ ] License files: `LICENSE`, `NOTICE`, `THIRD_PARTY_NOTICES.md`, and `third_party/` copies are present and consistent
-- [ ] Contributor docs: `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, `docs/ARCHITECTURE.md`, `docs/ROADMAP.md`
-- [ ] CI workflow runs publication checks, unit tests, lint, and debug assembly
-- [ ] Clean build: `.\gradlew.bat clean :app:assembleDebug` succeeds from a fresh tree
-- [ ] Lint: `:app:lintDebug` completes without errors
-- [ ] Public-data scan: no personal absolute paths, private test servers, debug nicknames, or credential files in tracked text
+- [x] Repository hygiene: `.gitignore` excludes build output, SDK paths, credentials, and diagnostic artifacts
+- [x] Deterministic unit tests: normal tests make no external DNS or live-server requests
+- [x] Patched ts3j provenance: JAR hash matches documented value; rebuild script reproduces byte-for-byte
+- [x] License files: `LICENSE`, `NOTICE`, `THIRD_PARTY_NOTICES.md`, and `third_party/` copies are present and consistent
+- [x] Contributor docs: `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, `docs/ARCHITECTURE.md`, `docs/ROADMAP.md`
+- [x] CI workflow runs publication checks, unit tests, lint, and debug assembly
+- [x] Clean build: `.\gradlew.bat clean :app:assembleDebug` succeeds from a fresh tree
+- [x] Lint: `:app:lintDebug` completes without errors
+- [x] Public-data scan: no personal absolute paths, private test servers, debug nicknames, or credential files in tracked text
 
 ## Legal and ownership (human approval required)
 
