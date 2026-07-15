@@ -63,6 +63,28 @@ foreach ($file in $publicBrandingFiles) {
     }
 }
 
+$settingsText = Get-Content -LiteralPath "settings.gradle.kts" -Raw
+$dependencyBlockStart = $settingsText.IndexOf("dependencyResolutionManagement")
+if ($dependencyBlockStart -lt 0) {
+    $failures.Add("Gradle dependency repository block is missing.")
+} else {
+    $repositoryBlocks = @(
+        $settingsText.Substring(0, $dependencyBlockStart),
+        $settingsText.Substring($dependencyBlockStart)
+    )
+    for ($index = 0; $index -lt $repositoryBlocks.Count; $index++) {
+        $block = $repositoryBlocks[$index]
+        $aliyunIndex = $block.IndexOf("https://maven.aliyun.com")
+        $googleIndex = $block.IndexOf("google()")
+        $mavenCentralIndex = $block.IndexOf("mavenCentral()")
+        if ($aliyunIndex -lt 0 -or $googleIndex -lt 0 -or $mavenCentralIndex -lt 0) {
+            $failures.Add("Expected official and fallback repositories in Gradle repository block $($index + 1).")
+        } elseif ($googleIndex -gt $aliyunIndex -or $mavenCentralIndex -gt $aliyunIndex) {
+            $failures.Add("Official Gradle repositories must precede Aliyun fallbacks in repository block $($index + 1).")
+        }
+    }
+}
+
 foreach ($file in $files) {
     if (-not (Test-Path -LiteralPath $file -PathType Leaf)) { continue }
     $extension = [IO.Path]::GetExtension($file).ToLowerInvariant()
