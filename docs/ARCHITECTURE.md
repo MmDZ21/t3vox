@@ -1,6 +1,6 @@
 # Architecture
 
-TS3 Mobile (Unofficial) is a single-module Android application that connects to **one** TeamSpeak 3 server at a time, receives and transmits **OPUS_VOICE** audio, and manages a **single local identity**. It does not implement text chat, whispers, or server administration.
+T3Vox is a single-module Android application compatible with TeamSpeak 3 servers. It connects to **one** server at a time, receives and transmits **OPUS_VOICE** audio, and manages a **single local identity**. It does not implement text chat, whispers, or server administration.
 
 Source code lives under `app/src/main/java/com/toosarax/ts3client/` with package boundaries for UI, client session coordination, protocol, audio, settings, and foreground service code.
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Voice Chat</string>
-    <string name="app_subtitle">Connect to a TeamSpeak server</string>
+    <string name="app_name">T3Vox</string>
+    <string name="app_subtitle">Connect to a TeamSpeak 3 server</string>
 
     <string name="notification_channel_name">Voice session</string>
     <string name="notification_channel_description">Active voice connection</string>
@@ -79,7 +79,7 @@
     <string name="people_empty">No one else is in this room</string>
 
     <string name="permission_title">Microphone access needed</string>
-    <string name="permission_body">Voice Chat needs your microphone so others can hear you. Notifications keep the call running when you switch apps.</string>
+    <string name="permission_body">T3Vox needs your microphone so others can hear you. Notifications keep the call running when you switch apps.</string>
 
     <string name="unsupported_codec">This room uses an audio format this app cannot play yet. Ask the server admin to use Opus Voice.</string>
 

@@ -1,6 +1,6 @@
 # Roadmap
 
-This document describes planned milestones for TS3 Mobile (Unofficial). Timelines are indicative; scope may shift based on contributor capacity and feedback.
+This document describes planned milestones for T3Vox, an independent Android client compatible with TeamSpeak 3 servers. Timelines are indicative; scope may shift based on contributor capacity and feedback.
 
 ## Milestone 1 — Public-source alpha
 

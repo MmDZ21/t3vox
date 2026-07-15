@@ -1,6 +1,6 @@
-# TS3 Mobile (Unofficial)
+# T3Vox
 
-An unofficial TeamSpeak 3 Android client MVP built with Kotlin, Jetpack Compose, [ts3j](https://github.com/Manevolent/ts3j), and [Concentus](https://github.com/lostromb/concentus).
+An unofficial open-source Android client compatible with TeamSpeak 3 servers, built with Kotlin, Jetpack Compose, [ts3j](https://github.com/Manevolent/ts3j), and [Concentus](https://github.com/lostromb/concentus).
 
 This repository is an alpha-quality community project. Do not rely on it for emergency or production-critical communication.
 
@@ -83,4 +83,6 @@ The TS3 identity private key and per-install HWID are stored in app-private `noB
 
 ## Legal
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+T3Vox is an independent project and is not affiliated with, endorsed by, or sponsored by TeamSpeak Systems GmbH. TeamSpeak is a trademark of TeamSpeak Systems GmbH.
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency and trademark notices.

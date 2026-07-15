@@ -1,5 +1,7 @@
 # Repository Guidelines
 
+T3Vox is an independent open-source Android client compatible with TeamSpeak 3 servers. Keep compatibility references descriptive and never imply affiliation with or endorsement by TeamSpeak.
+
 ## Project Structure & Module Organization
 
 This is a single-module Android application. Production Kotlin and the patched ts3j Java class live under `app/src/main/java/com/toosarax/ts3client/`; keep UI, client coordination, protocol, audio, settings, and foreground-service code in their existing packages. Android resources and the manifest are in `app/src/main/res/` and `app/src/main/AndroidManifest.xml`. Local unit tests belong in `app/src/test/`; device and emulator tests belong in `app/src/androidTest/`. Supporting instructions and PowerShell helpers live in `docs/` and `scripts/`. Do not edit generated `app/build/` files or commit `.android-sdk/` and `local.properties`.

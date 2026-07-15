@@ -19,7 +19,7 @@ Use this list during Milestone 1 source-release preparation and before any owner
 ## Legal and ownership (human approval required)
 
 - [ ] Legal review completed for trademark, protocol, reverse-engineering, and distribution questions
-- [ ] Final project name and branding approved
+- [x] Final project name and branding approved: **T3Vox**
 - [ ] GitHub organization or owner account confirmed
 - [ ] Security reporting channel configured (private vulnerability reporting or Security Advisory)
 - [ ] Repository visibility approval (public vs private) from owner
@@ -29,3 +29,4 @@ Use this list during Milestone 1 source-release preparation and before any owner
 
 - Engineering items should be evidenced locally (test output, script results, `git status`) before checking them off.
 - Unchecked legal and ownership gates intentionally block push, publication, tagging, and binary release until a human owner completes review.
+- T3Vox rename verification on 2026-07-16: publication readiness passed; 25 unit tests passed; debug lint completed with 0 errors and 29 warnings; debug assembly succeeded.

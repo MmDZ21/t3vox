@@ -25,4 +25,4 @@ When a shipped dependency changes, update this notice file and the corresponding
 
 ## TeamSpeak
 
-TeamSpeak is a trademark of TeamSpeak Systems GmbH. This project is unofficial and is not affiliated with or endorsed by TeamSpeak Systems GmbH.
+TeamSpeak is a trademark of TeamSpeak Systems GmbH. T3Vox is an independent project and is not affiliated with, endorsed by, or sponsored by TeamSpeak Systems GmbH.

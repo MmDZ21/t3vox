@@ -1,6 +1,6 @@
-# Contributing to TS3 Mobile (Unofficial)
+# Contributing to T3Vox
 
-Thank you for your interest in contributing. This repository is an **alpha-quality community project**. It is not affiliated with or endorsed by TeamSpeak Systems GmbH.
+Thank you for your interest in contributing. T3Vox is an **alpha-quality independent community project** compatible with TeamSpeak 3 servers. It is not affiliated with, endorsed by, or sponsored by TeamSpeak Systems GmbH.
 
 ## Before You Start
 

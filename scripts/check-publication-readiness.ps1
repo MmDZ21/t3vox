@@ -34,6 +34,35 @@ $forbiddenPatterns = [ordered]@{
     "private debug nickname" = ("Cursor" + "Debug")
 }
 
+$brandingChecks = [ordered]@{
+    "README title" = @{ Path = "README.md"; Pattern = "(?m)^# T3Vox$" }
+    "Android app name" = @{ Path = "app/src/main/res/values/strings.xml"; Pattern = '<string name="app_name">T3Vox</string>' }
+    "Gradle project name" = @{ Path = "settings.gradle.kts"; Pattern = 'rootProject\.name = "t3vox"' }
+    "NOTICE title" = @{ Path = "NOTICE"; Pattern = "(?m)^T3Vox$" }
+}
+
+foreach ($entry in $brandingChecks.GetEnumerator()) {
+    $check = $entry.Value
+    if (-not (Select-String -LiteralPath $check.Path -Pattern $check.Pattern -Quiet)) {
+        $failures.Add("T3Vox branding check failed: $($entry.Key)")
+    }
+}
+
+$publicBrandingFiles = @(
+    "README.md",
+    "CONTRIBUTING.md",
+    "NOTICE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md",
+    "app/src/main/res/values/strings.xml"
+)
+foreach ($file in $publicBrandingFiles) {
+    if (Select-String -LiteralPath $file -Pattern "TS3 Mobile \(Unofficial\)|Voice Chat" -CaseSensitive -Quiet) {
+        $failures.Add("Legacy public-facing project name found in $file")
+    }
+}
+
 foreach ($file in $files) {
     if (-not (Test-Path -LiteralPath $file -PathType Leaf)) { continue }
     $extension = [IO.Path]::GetExtension($file).ToLowerInvariant()

@@ -36,5 +36,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ts3"
+rootProject.name = "t3vox"
 include(":app")
