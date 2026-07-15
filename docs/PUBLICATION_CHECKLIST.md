@@ -1,0 +1,31 @@
+# Publication Checklist
+
+Passing this checklist prepares source for review; it does not authorize pushing, publication, tagging, or binary distribution.
+
+Use this list during Milestone 1 source-release preparation and before any owner or legal review.
+
+## Engineering
+
+- [ ] Repository hygiene: `.gitignore` excludes build output, SDK paths, credentials, and diagnostic artifacts
+- [ ] Deterministic unit tests: normal tests make no external DNS or live-server requests
+- [ ] Patched ts3j provenance: JAR hash matches documented value; rebuild script reproduces byte-for-byte
+- [ ] License files: `LICENSE`, `NOTICE`, `THIRD_PARTY_NOTICES.md`, and `third_party/` copies are present and consistent
+- [ ] Contributor docs: `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, `docs/ARCHITECTURE.md`, `docs/ROADMAP.md`
+- [ ] CI workflow runs publication checks, unit tests, lint, and debug assembly
+- [ ] Clean build: `.\gradlew.bat clean :app:assembleDebug` succeeds from a fresh tree
+- [ ] Lint: `:app:lintDebug` completes without errors
+- [ ] Public-data scan: no personal absolute paths, private test servers, debug nicknames, or credential files in tracked text
+
+## Legal and ownership (human approval required)
+
+- [ ] Legal review completed for trademark, protocol, reverse-engineering, and distribution questions
+- [ ] Final project name and branding approved
+- [ ] GitHub organization or owner account confirmed
+- [ ] Security reporting channel configured (private vulnerability reporting or Security Advisory)
+- [ ] Repository visibility approval (public vs private) from owner
+- [ ] Binary distribution approval (APK/AAB upload, signing, store listing)
+
+## Notes
+
+- Engineering items should be evidenced locally (test output, script results, `git status`) before checking them off.
+- Unchecked legal and ownership gates intentionally block push, publication, tagging, and binary release until a human owner completes review.
