@@ -1053,7 +1053,7 @@ Expected: first commit contains LICENSE; the path-history scan prints nothing; n
 
 Mark hygiene, deterministic tests, provenance, license files, docs, local build, and lint only when proven. Keep legal, naming, owner, visibility, and binary-distribution gates unchecked.
 
-- [ ] **Step 6: Commit checklist evidence if changed**
+- [x] **Step 6: Commit checklist evidence if changed**
 
 ~~~powershell
 git add docs/PUBLICATION_CHECKLIST.md
@@ -1063,7 +1063,7 @@ if ($LASTEXITCODE -eq 1) {
 }
 ~~~
 
-- [ ] **Step 7: Stop before publication**
+- [x] **Step 7: Stop before publication**
 
 Return commits, validation commands/results, test count, lint counts, JAR hashes, deviations, and all unchecked gates. Do not add a remote, rename the branch, push, tag, publish, sign, or distribute.
 
